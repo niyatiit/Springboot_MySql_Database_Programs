@@ -1,0 +1,53 @@
+/**************** H2 Database  **************/
+spring.application.name=Practical1
+
+#Databse connection H2 Databse :- 
+spring.datasource.username=sa
+spring.datasource.password=
+spring.datasource.url=jdbc:h2:file:./data/practical1db  // practicaldb1 ni jagya e tamara database nu name 
+spring.datasource.driver-class-name=org.h2.Driver
+
+# JPA / Hibernate
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
+
+# H2 Web Console - lets you view your database in the browser
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+# Server Port
+server.port=8000
+
+
+
+/************* MySQL Database ************/
+
+spring.application.name=Practical14
+
+# Database Connection
+spring.datasource.url=jdbc:mysql://localhost:3306/practicaldb1?createDatabaseIfNotExist=true   // Database nu name change kari ne tamari rite je apvu hoy e 
+spring.datasource.username=root
+spring.datasource.password=Niyati@2026 // Password change kari dejo maro na apta nkr nai connect thay 
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# JPA / Hibernate
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+
+#Server Port
+server.port=8080
+
+
+
+// note :- jo tame MySQL use karo cho to Mahesh sir ne password puchi levo and jo h2 database use karo cho to tamare a clone karela program ma h2 database ni dependency add karvi padse je tamane :- 
+<!-- Source: https://mvnrepository.com/artifact/com.h2database/h2 -->
+<dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <version>2.4.240</version>
+    <scope>test</scope>
+</dependency>
+
+a dependency add karvi padse tamara pom.xml file ma okay !! 
